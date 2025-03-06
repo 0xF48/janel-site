@@ -46,3 +46,5 @@ next-env.d.ts
 # Directus database and uploads
 /db
 !/db/.gitkeep
+
+docker-compose.yml
