@@ -1,22 +1,25 @@
-import React from 'react';
+'use client';
+
+import React, { Suspense } from 'react';
 import { getData } from '../getData';
 import { BookListItem } from '../BookListItem';
+import { MailerLite } from './MailerLite';
 
 
-export default async function BooksPage() {
-	const { books } = await getData()
+
+export default function NewsletterPage() {
+	// const { books } = await getData()
 
 
 	return (
+		<div className='w-full'>
+			{/* <MailerLite />
+			<Suspense fallback={<div className="h-96 flex items-center justify-center">Loading newsletter form...</div>}>
+				<div className="ml-embedded" data-form="GPRrIi"></div>
+			</Suspense> */}
 
+		</div >
 
-		<form className='w-full flex flex-col gap-2'>
-			<div>subscribe to the newsletter</div>
-			<input type='text' placeholder='name' />
-			<input type='email' placeholder='email' />
-			<input type='message' placeholder='message' />
-			<button type='submit'>Subscribe</button>
-		</form>
 
 	);
 }

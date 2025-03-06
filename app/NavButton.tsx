@@ -19,7 +19,7 @@ export function NavButton() {
 		useAbsoluteOffset={false}
 		classNames={{
 			style: 'bg-main-500 rounded-2xl ',
-			position: 'fixed top-16 right-[20em] w-[14em] h-12'
+			position: 'relative w-[14em] h-12'
 		}}>
 		<div className="w-full h-full flex items-center flex-row px-4 font-gloock font-black justify-between">
 			{currentOption.label}

@@ -8,10 +8,7 @@ export default async function BooksPage() {
 
 
 	return (
-		<div className='grid grid-cols-4 gap-0 mb-20 border-main-600 border-solid border-l-1 '>
-			{books.map((book) => <BookListItem key={book.id} book={book} />)}
-			{books.map((book) => <BookListItem key={book.id} book={book} />)}
-			{books.map((book) => <BookListItem key={book.id} book={book} />)}
+		<div className='grid grid-cols-4 gap-0 mb-20 '>
 			{books.map((book) => <BookListItem key={book.id} book={book} />)}
 		</div>
 	);
