@@ -1,6 +1,7 @@
 import React from 'react';
-import { getAssetURL, getData } from '../getData';
+import { getData } from '../getData';
 import { BookListItem } from '../BookListItem';
+import { getAssetURL } from '../getAssetURL';
 
 
 export default async function BooksPage() {
