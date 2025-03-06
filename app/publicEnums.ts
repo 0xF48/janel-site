@@ -27,6 +27,11 @@ export type Book = {
 	cover: string;
 	description: string;
 	date_created: string;
+	ebook_link?: string;
+	hardcover_link?: string;
+	paperback_link?: string;
+	audiobook_link?: string;
+
 }
 
 export type Globals = {
