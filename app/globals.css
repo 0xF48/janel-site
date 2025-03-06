@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+
+@theme {
+	--color-main: #091D46;
+	--color-main-50: #EEF1F7;
+	--color-main-100: #D0D9E9;
+	--color-main-200: #A1B3D3;
+	--color-main-300: #728DBD;
+	--color-main-400: #4268A7;
+	--color-main-500: #2E4C7A;
+	--color-main-600: #1E3358;
+	--color-main-700: #132343;
+	--color-main-800: #0B1628;
+	--color-main-900: #060D1A;
+	--color-main-950: #091D46;
+}
+
+.font-gloock {
+	font-family: "Gloock", serif;
+	font-weight: 400;
+	font-style: normal;
+}
