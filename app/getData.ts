@@ -16,7 +16,3 @@ export const getData = cache(async (): Promise<Schema> => {
 	return { books, globals };
 
 });
-
-export function getAssetURL(asset_id: string) {
-	return GLOBAL.DIRECTUS_API + 'assets/' + asset_id;
-}

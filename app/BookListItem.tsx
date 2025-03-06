@@ -1,6 +1,6 @@
 import React from "react";
 import { Book } from "./publicEnums";
-import { getAssetURL } from "./getData";
+import { getAssetURL } from "./getAssetURL";
 import { format } from 'date-fns'
 
 export function BookListItem({ book }: { book: Book }) {
