@@ -19,8 +19,13 @@ export const navOptions = [
 	},
 ]
 
-export type Book = {
+export enum BOOK_GENRE {
+	Fiction = 1,
+	NonFiction = 2
+}
 
+export type Book = {
+	genre: number;
 	book_title: string;
 	date: string;
 	id: number;
