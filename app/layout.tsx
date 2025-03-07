@@ -24,15 +24,15 @@ export default async function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet" />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>{globals.header_name}</title>
+        <title >{globals.header_name}</title>
         <meta name="description" content={globals.header_description} />
       </head>
 
       <body className="bg-main-700 text-white w-full h-fit min-h-screen justify-between flex flex-col">
 
 
-        <header className="h-35 py-10 border-main-600 border-solid border-b-1 left-0 top-0 w-full">
-          <div className="mx-auto max-w-6xl flex items-center justify-between px-10">
+        <header className="h-35 py-10 border-main-600 border-solid border-b-1 left-0 top-0 w-full mt-20 md:mt-0">
+          <div className="mx-auto max-w-6xl flex items-center justify-center md:justify-between px-10">
             <Link href={'/books'} className="text-[3em] font-gloock">{globals.header_name}</Link>
 
           </div>

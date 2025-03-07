@@ -11,9 +11,9 @@ export default async function BookDetails({ params }: any) {
 	if (!book) return <h1>Book not found</h1>
 	return (
 		<>
-			<div className='w-full grid grid-cols-2 gap-0 border-main-600 border-solid border-b-1'>
-				<div className='w-full h-full flex items-start justify-center pt-10 relative border-main-600 border-solid border-r-1'>
-					<img className="h-[20em] absolute left-1/2 -translate-x-1/2 top-20 rounded-xl" src={getAssetURL(book.cover)} alt={book.book_title} />
+			<div className='w-full flex flex-col md:flex-row gap-0 border-main-600 border-solid border-b-1'>
+				<div className='w-[20rem] shrink-0 h-full flex items-start justify-center py-10 relative border-main-600 border-solid border-r-1'>
+					<img className="h-[20em] rounded-xl" src={getAssetURL(book.cover)} alt={book.book_title} />
 				</div>
 				<div className='p-10  bg-main-800'>
 					<div>
