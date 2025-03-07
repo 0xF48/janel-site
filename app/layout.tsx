@@ -4,6 +4,7 @@ import { getData } from "./getData"
 import ScrollToTop from "./ScrollToTop"
 import { NavButtonWrapper } from "./NavButtonWrapper"
 import { Footer } from "./Footer"
+import Link from "next/link"
 
 
 export default async function RootLayout({
@@ -31,7 +32,7 @@ export default async function RootLayout({
 
         <header className="h-35 py-10 border-main-600 border-solid border-b-1 left-0 top-0 w-full">
           <div className="mx-auto max-w-6xl flex items-center justify-between px-10">
-            <div className="text-[3em] font-gloock">{globals.header_name}</div>
+            <Link href={'/books'} className="text-[3em] font-gloock">{globals.header_name}</Link>
 
           </div>
         </header>
