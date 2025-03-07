@@ -55,9 +55,10 @@ export default function MotionBox({
 	if (positionRef.current) {
 		setX = positionRef.current.offsetLeft
 		setY = positionRef.current.offsetTop
+		let rect = positionRef.current.getBoundingClientRect()
+		setX = rect.x
+		setY = rect.y
 	}
-
-
 
 
 	useEffect(() => {
@@ -124,6 +125,9 @@ export default function MotionBox({
 		let setX = positionRef.current.offsetLeft
 		let setY = positionRef.current.offsetTop
 		let rect = positionRef.current.getBoundingClientRect()
+
+		setX = rect.x
+		setY = rect.y
 
 		if (!init) {
 			spx.jump(setX)
@@ -198,7 +202,7 @@ export default function MotionBox({
 
 
 	return <>
-		<div className={classNames.position} style={classNames.positionStyle} ref={positionRef}>
+		<div className={classNames.position + ' pointer-events-none'} style={classNames.positionStyle} ref={positionRef}>
 			{content}
 		</div>
 		{(!posIsRelative && isRelative) && content}

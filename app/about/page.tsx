@@ -10,13 +10,14 @@ export default async function BooksPage() {
 
 	return (
 		<div className='grid grid-cols-2 gap-0 mb-20 border-main-600'>
-			<div className='border-main-600 border-solid border-r-1 flex items-end w-full flex-row justify-end pr-10'>
-				<img className='max-w-[20em] rounded-2xl border-10 border-main-800' src={getAssetURL(globals.author_picture)} alt={globals.header_name} />
+			<div className='w-full h-full flex items-start justify-center pt-10 relative border-main-600 border-solid border-r-1'>
+				<img className='h-[20em] absolute left-1/2 -translate-x-1/2 top-20 rounded-xl' src={getAssetURL(globals.author_picture)} alt={globals.header_name} />
 			</div>
-			<div
-				className="prose prose-invert max-w-none pl-10"
-				dangerouslySetInnerHTML={{ __html: globals.author_about }}
-			/>
+			<div className='p-10  bg-main-800'>
+
+				<p className='mt-6 font-serif text-lg prose prose-invert max-w-none space-y-4'
+					dangerouslySetInnerHTML={{ __html: globals.author_about }} />
+			</div>
 		</div>
 	);
 }

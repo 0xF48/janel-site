@@ -10,7 +10,6 @@ export default async function BookDetails({ params }: any) {
 	const book = books.find((book) => Number(book.id) === Number(params.slug))
 	if (!book) return <h1>Book not found</h1>
 	return (
-
 		<>
 			<div className='w-full grid grid-cols-2 gap-0 border-main-600 border-solid border-b-1'>
 				<div className='w-full h-full flex items-start justify-center pt-10 relative border-main-600 border-solid border-r-1'>
@@ -18,12 +17,10 @@ export default async function BookDetails({ params }: any) {
 				</div>
 				<div className='p-10  bg-main-800'>
 					<div>
-
 						<h1 className='text-4xl font-gloock'>{book.book_title}</h1>
 						<h4 className='text-md text-main-400  font-mono mt-2 text-sm'>published on {format(new Date(book.date), 'PP')}</h4>
 					</div>
 					<p className='mt-6 font-serif text-lg prose prose-invert max-w-none space-y-4' dangerouslySetInnerHTML={{ __html: book.description }} />
-
 				</div>
 			</div>
 			<div className='w-full items-start justify-center flex flex-row gap-5 py-10 border-main-600 border-solid border-b-1'>
@@ -31,7 +28,5 @@ export default async function BookDetails({ params }: any) {
 			</div>
 			<BookList skip={book.id} />
 		</>
-
-
 	);
 }
