@@ -31,12 +31,12 @@ export default async function RootLayout({
       <body className="bg-main-700 text-white w-full h-fit min-h-screen justify-between flex flex-col">
 
 
-        <header className="h-35 py-10 border-main-600 border-solid border-b-1 left-0 top-0 w-full mt-20 md:mt-0">
+        <header className="h-35 py-10 border-main-600 border-solid border-b-1 left-0 top-0 w-full mt-30 md:mt-0">
           <div className="mx-auto max-w-6xl flex items-center justify-center md:justify-between px-10">
 
-            <Link href={'/books'} className="text-[3em] relative  -mt-5">
-              <div className="font-gloock ">{globals.header_name}</div>
-              <div className="absolute font-display text-main-200 font-thin text-xl right-0 -bottom-4 ">{globals.header_description}</div>
+            <Link href={'/books'} className="relative  -mt-5">
+              <div className="font-gloock text-4xl md:text-6xl">{globals.header_name}</div>
+              <div className="absolute font-display text-main-200 font-thin text-xl right-0 -bottom-7 ">{globals.header_description}</div>
             </Link>
 
 
