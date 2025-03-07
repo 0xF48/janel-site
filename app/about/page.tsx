@@ -16,7 +16,7 @@ export default async function BooksPage() {
 			</div>
 			<div className='p-10  bg-main-800'>
 
-				<p className='mt-6 font-serif text-lg prose prose-invert max-w-none space-y-4'
+				<div className='mt-6 font-serif text-lg prose prose-invert max-w-none space-y-4'
 					dangerouslySetInnerHTML={{ __html: globals.author_about }} />
 			</div>
 		</div>
