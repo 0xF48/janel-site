@@ -12,6 +12,7 @@
 	--color-main-500: #2E4C7A;
 	--color-main-600: #1E3358;
 	--color-main-700: #132343;
+	--color-main-750: #0D1B3A;
 	--color-main-800: #0B1628;
 	--color-main-900: #060D1A;
 	--color-main-950: #091D46;
@@ -21,4 +22,8 @@
 	font-family: "Gloock", serif;
 	font-weight: 400;
 	font-style: normal;
+}
+
+.font-display {
+	font-family: "Outfit", sans-serif;
 }
