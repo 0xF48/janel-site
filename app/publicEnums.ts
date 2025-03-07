@@ -6,13 +6,13 @@ import { useMemo } from "react";
 
 export const navOptions = [
 	{
-		label: 'Books',
+		label: 'My Books',
 		href: '/books'
 	},
-	{
-		label: 'About',
-		href: '/about'
-	},
+	// {
+	// 	label: 'About',
+	// 	href: '/about'
+	// },
 	{
 		label: 'Newsletter',
 		href: '/newsletter'
