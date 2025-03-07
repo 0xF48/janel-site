@@ -33,7 +33,13 @@ export default async function RootLayout({
 
         <header className="h-35 py-10 border-main-600 border-solid border-b-1 left-0 top-0 w-full mt-20 md:mt-0">
           <div className="mx-auto max-w-6xl flex items-center justify-center md:justify-between px-10">
-            <Link href={'/books'} className="text-[3em] font-gloock">{globals.header_name}</Link>
+
+            <Link href={'/books'} className="text-[3em] relative  -mt-5">
+              <div className="font-gloock ">{globals.header_name}</div>
+              <div className="absolute font-display text-main-200 font-thin text-xl right-0 -bottom-4 ">{globals.header_description}</div>
+            </Link>
+
+
 
           </div>
         </header>
