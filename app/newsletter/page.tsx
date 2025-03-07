@@ -43,13 +43,13 @@ export default function NewsletterPage() {
 			Thanks for subscribing, <span className='text-green-500'>{name}</span>
 		</div>
 	} else {
-		form = <form className='flex flex-col space-y-6 p-10 max-w' onSubmit={(e) => {
+		form = <form className='flex flex-col space-y-10 p-10 max-w' onSubmit={(e) => {
 			e.preventDefault();
 			//@ts-ignore
 			subscribe(e.target.name.value, e.target.email.value)
 		}}>
-			<div className='text-2xl font-bold text-center text-display p-10 h-full mt-0 text-main-200'>
-				subsribe to my newsletter
+			<div className='text-2xl font-thin text-center text-display p-10 h-full mt-0 text-white'>
+				Subscribe to my newsletter
 			</div>
 
 			<input onChange={(e) => { setName(e.target.value) }} type='text' name='name' placeholder='Your Name' className='h-12 px-6 transition-all rounded-2xl hover:bg-main-500 bg-main-600 font-bold  outline-none placeholder-main-400 hover:ring-4 ring-4 focus:ring-main-400 ring-main-500' />
