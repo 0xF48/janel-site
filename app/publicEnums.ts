@@ -31,6 +31,7 @@ export type Book = {
 	hardcover_link?: string;
 	paperback_link?: string;
 	audiobook_link?: string;
+	background_image: string;
 
 }
 
