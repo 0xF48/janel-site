@@ -1,5 +1,6 @@
 'use client';
 
+import { RssIcon } from 'lucide-react';
 import React, { Suspense } from 'react';
 import Confetti from 'react-confetti'
 
@@ -43,18 +44,20 @@ export default function NewsletterPage() {
 			Thanks for subscribing, <span className='text-green-500'>{name}</span>
 		</div>
 	} else {
-		form = <form className='flex flex-col space-y-10 p-10 max-w' onSubmit={(e) => {
+		form = <form className='flex flex-col gap-4 p-10 max-w items-center w-md' onSubmit={(e) => {
 			e.preventDefault();
 			//@ts-ignore
 			subscribe(e.target.name.value, e.target.email.value)
 		}}>
+
 			<div className='text-2xl font-thin text-center text-display p-10 h-full mt-0 text-white'>
+				<RssIcon size={50} strokeWidth={3} className='mx-auto text-blue-500 mb-10' />
 				Subscribe to my newsletter
 			</div>
 
-			<input onChange={(e) => { setName(e.target.value) }} type='text' name='name' placeholder='Your Name' className='h-12 px-6 transition-all rounded-2xl hover:bg-main-500 bg-main-600 font-bold  outline-none placeholder-main-400 hover:ring-4 ring-4 focus:ring-main-400 ring-main-500' />
-			<input onChange={(e) => { setEmail(e.target.value) }} type='email' name='email' placeholder='Your Email' className='h-12 px-6 transition-all rounded-2xl hover:bg-main-500 bg-main-600 font-bold outline-none placeholder-main-400 hover:ring-4 ring-4 focus:ring-main-400 ring-main-500' />
-			<button type='submit' className='h-12 px-6 flex items-center justify-center rounded-2xl bg-indigo-400 text-white font-black outline-none focus:ring-4 ring-main-400 cursor-pointer hover:bg-indigo-500'>Subscribe</button>
+			<input onChange={(e) => { setName(e.target.value) }} type='text' name='name' placeholder='Your Name' className='w-full h-12 px-6 transition-all rounded-2xl hover:bg-main-500 bg-main-600 font-bold  outline-none placeholder-main-400 hover:ring-4 ring-4 focus:ring-main-400 ring-main-500' />
+			<input onChange={(e) => { setEmail(e.target.value) }} type='email' name='email' placeholder='Your Email' className='w-full h-12 px-6 transition-all rounded-2xl hover:bg-main-500 bg-main-600 font-bold outline-none placeholder-main-400 hover:ring-4 ring-4 focus:ring-main-400 ring-main-500' />
+			<button type='submit' className='mt-10 transition-all w-[10em] h-12 px-6 flex items-center justify-center rounded-2xl bg-blue-500 text-white font-black outline-none ring-4 ring-blue-400  cursor-pointer hover:bg-blue-400'>Subscribe</button>
 		</form>
 	}
 
