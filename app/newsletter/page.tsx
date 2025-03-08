@@ -55,9 +55,9 @@ export default function NewsletterPage() {
 				Subscribe to my newsletter
 			</div>
 
-			<input onChange={(e) => { setName(e.target.value) }} type='text' name='name' placeholder='Your Name' className='w-full h-12 px-6 transition-all rounded-2xl hover:bg-main-500 bg-main-600 font-bold  outline-none placeholder-main-400 hover:ring-4 ring-4 focus:ring-main-400 ring-main-500' />
-			<input onChange={(e) => { setEmail(e.target.value) }} type='email' name='email' placeholder='Your Email' className='w-full h-12 px-6 transition-all rounded-2xl hover:bg-main-500 bg-main-600 font-bold outline-none placeholder-main-400 hover:ring-4 ring-4 focus:ring-main-400 ring-main-500' />
-			<button type='submit' className='mt-10 transition-all w-[10em] h-12 px-6 flex items-center justify-center rounded-2xl bg-blue-500 text-white font-black outline-none ring-4 ring-blue-400  cursor-pointer hover:bg-blue-400'>Subscribe</button>
+			<input onChange={(e) => { setName(e.target.value) }} type='text' name='name' placeholder='Your Name' className='w-full h-12 px-6 transition-all rounded-2xl hover:bg-main-500 bg-main-600 font-medium  outline-none placeholder-main-300 hover:ring-3 ring-3 focus:ring-main-400 ring-main-500' />
+			<input onChange={(e) => { setEmail(e.target.value) }} type='email' name='email' placeholder='Your Email' className='w-full h-12 px-6 transition-all rounded-2xl hover:bg-main-500 bg-main-600 font-medium outline-none placeholder-main-300 hover:ring-3 ring-3 focus:ring-main-400 ring-main-500' />
+			<button type='submit' className='mt-10 transition-all w-[10em] h-12 px-6 flex items-center justify-center rounded-2xl bg-blue-500 text-white font-black outline-none ring-3 ring-blue-400  cursor-pointer hover:bg-blue-400'>Subscribe</button>
 		</form>
 	}
 

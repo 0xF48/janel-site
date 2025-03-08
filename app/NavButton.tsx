@@ -72,7 +72,7 @@ export function NavButton() {
 			relativeContentPosition={false}
 			useAbsoluteOffset={false}
 			classNames={{
-				style: cn(isOpen ? 'bg-main-500' : 'bg-main-600', 'ring ring-4 ring-main-500 transition-colors rounded-2xl cursor-pointer z-40 hover:bg-main-500'),
+				style: cn(isOpen ? 'bg-main-500' : 'bg-main-600', 'ring ring-3 ring-main-500 transition-colors rounded-2xl cursor-pointer z-40 hover:bg-main-500'),
 				position: position
 			}}>
 			{content}

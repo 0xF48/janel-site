@@ -25,7 +25,7 @@ export default async function BookDetails({ params }: any) {
 					<div
 						className="absolute inset-0 -z-5 pointer-events-none left-0 top-0 w-full h-full"
 						style={{
-							background: 'linear-gradient(to bottom, transparent 0%, rgba(19,35,67,0.0) 0%, rgba(19,35,67,1.0) 100%)'
+							background: 'linear-gradient(to bottom, transparent 0%, rgba(19,35,67,0.0) 0%, var(--color-main-700) 100%)'
 						}}
 					></div>
 
@@ -45,9 +45,7 @@ export default async function BookDetails({ params }: any) {
 			<div className='w-full items-start justify-center flex flex-row gap-5 py-10 border-main-600 border-solid border-b-1'>
 				<BookLinksRow book={book} />
 			</div>
-			<div className='w-full items-start justify-center flex flex-row gap-5 py-10 border-main-600 border-solid border-b-1'>
-				<span className='font-mono text-main-400'>my other books</span>
-			</div>
+
 
 
 			<BookList skip={book.id} />

@@ -3,20 +3,18 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-	--color-main-50: #EFF0F5;
-	--color-main-100: #DFE0EC;
-	--color-main-200: #C2C5DB;
-	--color-main-300: #A3A6C7;
-	--color-main-400: #868BB6;
-	--color-main-500: #666CA3;
-	--color-main-600: #505686;
-	--color-main-700: #3B3F63;
-	--color-main-800: #282B43;
-	--color-main-900: #131420;
-	--color-main-950: #0A0A10;
+	--color-main-50: #dde7f4;
+	--color-main-100: #ccd9eb;
+	--color-main-200: #acbfd8;
+	--color-main-300: #839dbe;
+	--color-main-400: #576d89;
+	--color-main-500: #466286;
+	--color-main-600: #3a577d;
+	--color-main-700: #2a466a;
+	--color-main-800: #1e395c;
+	--color-main-900: #0c1a2c;
+	--color-main-950: #000000;
 }
-
-
 
 .font-gloock {
 	font-family: "Gloock", serif;
