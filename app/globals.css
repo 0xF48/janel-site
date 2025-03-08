@@ -3,17 +3,17 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-	--color-main-50: #dde7f4;
-	--color-main-100: #ccd9eb;
-	--color-main-200: #acbfd8;
-	--color-main-300: #839dbe;
-	--color-main-400: #576d89;
-	--color-main-500: #466286;
-	--color-main-600: #3a577d;
-	--color-main-700: #2a466a;
-	--color-main-800: #1e395c;
-	--color-main-900: #0c1a2c;
-	--color-main-950: #000000;
+	--color-main: oklch(43.42% 0.06677 207.89);
+	--color-main-50: oklch(78.558% 0.12516 192.96);
+	--color-main-100: oklch(75.786% 0.12137 194.9);
+	--color-main-200: oklch(67.897% 0.10756 197.28);
+	--color-main-300: oklch(59.758% 0.09387 200.53);
+	--color-main-400: oklch(51.625% 0.08008 204.07);
+	--color-main-500: oklch(43.42% 0.06677 207.89);
+	--color-main-600: oklch(36.466% 0.0555 211.32);
+	--color-main-700: oklch(29.507% 0.04331 214.81);
+	--color-main-800: oklch(22.406% 0.03086 217.57);
+	--color-main-900: oklch(15.053% 0.01687 218.09);
 }
 
 .font-gloock {
