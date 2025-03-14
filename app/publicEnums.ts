@@ -37,7 +37,7 @@ export type Book = {
 	paperback_link?: string;
 	audiobook_link?: string;
 	background_image: string;
-
+	embed: string;
 }
 
 export type Globals = {
@@ -53,6 +53,9 @@ export type Schema = {
 	books: Book[]
 	// ...other collections
 }
+
+
+
 
 export const enum GLOBAL {
 	DIRECTUS_API = "http://admin.janelcsterbentz.com:3001/",

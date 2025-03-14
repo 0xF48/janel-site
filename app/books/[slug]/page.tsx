@@ -35,8 +35,10 @@ export default async function BookDetails({ params }: any) {
 					<div>
 						<h1 className='text-4xl font-gloock'>{book.book_title}</h1>
 						<h4 className='text-md text-main-400  font-mono mt-2 text-sm'>published on {format(new Date(book.date), 'PP')}</h4>
-
 					</div>
+					<div
+						className='mt-6 font-serif text-lg prose prose-invert max-w-none space-y-4'
+						dangerouslySetInnerHTML={{ __html: book.embed }} />
 					<div
 						className='mt-6 font-serif text-lg prose prose-invert max-w-none space-y-4'
 						dangerouslySetInnerHTML={{ __html: book.description }} />
