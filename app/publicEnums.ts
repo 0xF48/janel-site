@@ -57,6 +57,6 @@ export type Schema = {
 
 
 
-export const enum GLOBAL {
-	DIRECTUS_API = "http://admin.lerp.io:3001/",
+export const GLOBAL = {
+	DIRECTUS_API: process.env.NEXT_PUBLIC_DIRECTUS_API_URL
 }
