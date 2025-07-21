@@ -8,11 +8,14 @@ import { cache } from 'react';
 export const getData = cache(async (): Promise<Schema> => {
 	const { client } = useClient()
 
-	const [books, globals] = await Promise.all([
+	const [books, globals, pages] = await Promise.all([
 		client.request(readItems('books', { limit: -1 })),
-		client.request(readSingleton('globals'))
+		client.request(readSingleton('globals')),
+		client.request(readItems('pages', { limit: -1 }))
 	]);
 
-	return { books, globals };
+
+
+	return { books, globals, pages };
 
 });

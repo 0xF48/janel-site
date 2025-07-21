@@ -24,6 +24,12 @@ export enum BOOK_GENRE {
 	NonFiction = 2
 }
 
+export type Page = {
+	title: string;
+	html: string;
+	slug: string;
+}
+
 export type Book = {
 	genre: number;
 	book_title: string;
@@ -51,6 +57,7 @@ export type Schema = {
 	// Define your collections and their types
 	globals: Globals
 	books: Book[]
+	pages: Page[]
 	// ...other collections
 }
 

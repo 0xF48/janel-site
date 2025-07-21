@@ -2,6 +2,10 @@
 import { usePathname } from "next/navigation"
 import { navOptions } from "./publicEnums";
 
+const NOT_FOUND = {
+	label: 'Not Found',
+	href: '/404'
+}
 
 
 export function useNav() {
@@ -9,10 +13,7 @@ export function useNav() {
 
 	const currentOption = navOptions.find(option =>
 		pathname === option.href || pathname.startsWith(`${option.href}/`)
-	) || {
-		label: 'Not Found',
-		href: '/404'
-	}
+	) || NOT_FOUND
 
 	return {
 		currentOption
