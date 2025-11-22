@@ -1,7 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+	cacheComponents: true,
 	images: {
-		domains: ['localhost', 'admin.janelcsterbentz.com'],
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: 'admin.janelcsterbentz.com',
+			},
+			{
+				protocol: 'http',
+				hostname: 'localhost',
+			},
+		],
 	},
 	async headers() {
 		return [

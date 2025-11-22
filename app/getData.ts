@@ -1,25 +1,23 @@
+'use cache';
+
 import { readItems, readSingleton } from '@directus/sdk';
 import { GLOBAL, Schema } from './publicEnums';
 import { useClient } from './useClient';
-import { unstable_cache } from 'next/cache';
+import { cacheLife, cacheTag } from 'next/cache';
 
 
 // Create a cached data fetching function with revalidation
-export const getData = unstable_cache(
-	async (): Promise<Schema> => {
-		const { client } = useClient()
+export async function getData(): Promise<Schema> {
+	cacheLife('max'); // Use max cache profile for stale-while-revalidate
+	cacheTag('directus-data'); // Tag for on-demand revalidation
 
-		const [books, globals, pages] = await Promise.all([
-			client.request(readItems('books', { limit: -1 })),
-			client.request(readSingleton('globals')),
-			client.request(readItems('pages', { limit: -1 }))
-		]);
+	const { client } = useClient()
 
-		return { books, globals, pages };
-	},
-	['directus-data'], // Cache key
-	{
-		revalidate: 60, // Revalidate every 60 seconds (adjust as needed)
-		tags: ['directus-data'] // Tag for on-demand revalidation
-	}
-);
+	const [books, globals, pages] = await Promise.all([
+		client.request(readItems('books', { limit: -1 })),
+		client.request(readSingleton('globals')),
+		client.request(readItems('pages', { limit: -1 }))
+	]);
+
+	return { books, globals, pages };
+}

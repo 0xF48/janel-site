@@ -12,7 +12,8 @@ export async function POST(request: NextRequest) {
 
 	try {
 		// Revalidate the cache for all Directus data
-		revalidateTag('directus-data');
+		// Using 'max' profile for stale-while-revalidate behavior
+		revalidateTag('directus-data', 'max');
 
 		return NextResponse.json({ revalidated: true, now: Date.now() });
 	} catch (err) {

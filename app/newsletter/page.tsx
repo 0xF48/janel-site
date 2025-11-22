@@ -1,14 +1,13 @@
 'use client';
 
 import { RssIcon } from 'lucide-react';
-import React, { Suspense } from 'react';
+import React from 'react';
 import Confetti from 'react-confetti'
-
-
-
+import { useWindowSize } from 'usehooks-ts'
 
 
 export default function NewsletterPage() {
+	const { width, height } = useWindowSize()
 	const [name, setName] = React.useState('')
 	const [email, setEmail] = React.useState('')
 	const [subscribed, setSubscribed] = React.useState(false)
@@ -37,8 +36,8 @@ export default function NewsletterPage() {
 
 	if (subscribed == true) {
 		confetti = <Confetti
-			width={window.innerWidth}
-			height={window.innerHeight}
+			width={width}
+			height={height}
 		/>
 		form = <div className='w-full text-2xl font-bold text-center text-display p-10 h-full mt-20 text-main-200'>
 			Thanks for subscribing, <span className='text-green-500'>{name}</span>
