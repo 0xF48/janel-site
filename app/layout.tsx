@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Suspense } from "react"
 import './globals.css'
 import { getData } from "./getData"
 import ScrollToTop from "./ScrollToTop"
@@ -44,12 +44,14 @@ export default async function RootLayout({
 
           </div>
         </header>
-        <NavButtonWrapper />
+        <Suspense fallback={null}>
+          <NavButtonWrapper />
+        </Suspense>
 
         {/* <header className="h-35 py-10 z-10 sticky left-0 top-0 w-full -mt-40 mb-5">
           <div className="mx-auto max-w-6xl flex items-center justify-end px-10">
             <div className="sticky top-0 z-20 mt-3">
-              
+
             </div>
           </div>
         </header> */}
@@ -63,7 +65,9 @@ export default async function RootLayout({
         </div>
 
         <Footer />
-        <ScrollToTop />
+        <Suspense fallback={null}>
+          <ScrollToTop />
+        </Suspense>
       </body >
     </html >
   )

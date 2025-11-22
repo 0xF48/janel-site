@@ -5,6 +5,13 @@ import BookList from '../BookList';
 import { format } from 'date-fns';
 import { BookLinks, BookLinksRow } from '../../BookLinkts';
 
+export async function generateStaticParams() {
+	const { books } = await getData()
+	return books.map((book) => ({
+		slug: book.id.toString(),
+	}))
+}
+
 export default async function BookDetails({ params }: any) {
 	const { books } = await getData()
 	const paramsSlug = (await params).slug

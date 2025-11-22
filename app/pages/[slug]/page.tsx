@@ -2,6 +2,13 @@ import React from 'react';
 import { getData } from '../../getData';
 import { parseRawHtml } from '../../parseRawHtml';
 
+export async function generateStaticParams() {
+	const { pages } = await getData()
+	return pages.map((page) => ({
+		slug: page.slug,
+	}))
+}
+
 export default async function Page({ params }: any) {
 	const { pages } = await getData()
 	const paramsSlug = (await params).slug
