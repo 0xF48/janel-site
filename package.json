@@ -13,7 +13,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "warm-cache": "tsx scripts/warm-cache.ts"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.11",
@@ -24,6 +25,7 @@
     "classnames": "^2.5.1",
     "framer-motion": "^12.4.10",
     "tailwindcss": "^4.0.11",
+    "tsx": "^4.19.2",
     "typescript": "5.8.2"
   }
 }

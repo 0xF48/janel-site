@@ -33,11 +33,12 @@ export async function GET(
 		const contentType = response.headers.get('content-type') || 'application/octet-stream';
 
 		// Return the image with correct headers
+		// Using stale-while-revalidate and stale-if-error to serve cached content even if origin is down
 		return new NextResponse(imageData, {
 			headers: {
 				'Content-Type': contentType,
-				'Cache-Control': 'public, max-age=31536000, immutable',
-				'CDN-Cache-Control': 'public, max-age=31536000, immutable',
+				'Cache-Control': 'public, max-age=31536000, stale-while-revalidate=31536000, stale-if-error=31536000, immutable',
+				'CDN-Cache-Control': 'public, max-age=31536000, stale-while-revalidate=31536000, stale-if-error=31536000, immutable',
 			},
 		});
 	} catch (error) {
