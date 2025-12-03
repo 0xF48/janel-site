@@ -10,12 +10,14 @@ export async function GET(
 		let { path } = await params
 
 
-		// Create URL to your Directus instance
-		const url = `${GLOBAL.DIRECTUS_API}assets/${path[0]}${request.nextUrl.search}`;
+		// Create URL to your Directus instance using URL constructor
+		const baseUrl = new URL(GLOBAL.DIRECTUS_API || '');
+		baseUrl.pathname = `/assets/${path[0]}`;
+		baseUrl.search = request.nextUrl.search;
 
 
 		// Fetch the image from Directus
-		const response = await fetch(url);
+		const response = await fetch(baseUrl.toString());
 
 		// If the response isn't ok, return an error
 		if (!response.ok) {
