@@ -37,6 +37,7 @@ export async function GET(
 			headers: {
 				'Content-Type': contentType,
 				'Cache-Control': 'public, max-age=31536000, immutable',
+				'CDN-Cache-Control': 'public, max-age=31536000, immutable',
 			},
 		});
 	} catch (error) {
